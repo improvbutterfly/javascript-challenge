@@ -46,8 +46,29 @@ function runEnter() {
   // Get the value property of the input element
   var inputCity = inputElement.property("value");
 
+  // Select the city input element and get the raw HTML node
+  inputElement = d3.select("#state");
+
+  // Get the value property of the input element
+  var inputState = inputElement.property("value");
+
+  // Select the city input element and get the raw HTML node
+  inputElement = d3.select("#country");
+
+  // Get the value property of the input element
+  var inputCountry = inputElement.property("value");
+
+  // Select the city input element and get the raw HTML node
+  inputElement = d3.select("#shape");
+
+  // Get the value property of the input element
+  var inputShape = inputElement.property("value");
+
   console.log(inputDate);
   console.log(inputCity);
+  console.log(inputState);
+  console.log(inputCountry);
+  console.log(inputShape);
   console.log(tableData);
 
   // Set filteredData to tableData to filter on multiple elements if they exist
@@ -58,6 +79,15 @@ function runEnter() {
   };
   if (inputCity){
   	filteredData = filteredData.filter(sighting => sighting.city === inputCity);
+  };
+  if (inputState){
+  	filteredData = filteredData.filter(sighting => sighting.state === inputState);
+  };
+  if (inputCountry){
+  	filteredData = filteredData.filter(sighting => sighting.country === inputCountry);
+  };
+  if (inputShape){
+  	filteredData = filteredData.filter(sighting => sighting.shape === inputShape);
   };
 
   console.log(filteredData);
