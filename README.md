@@ -5,4 +5,6 @@ In this exercise, I was provided with data on UFO sightings in a JavaScript file
 
 I was successfully able to filter on date, city, state, country, and shape. One of the modifications I had to make to the provided HTML form for the event listener to work properly on form submission was to change the button input type to submit input type, because hitting enter on my keyboard would not result in the form thinking it was being submitted. For this part of the exercise, I also converted the user inputs to lower cases, since all of the data was in lower case, to make it easier to compare and filter.
 
+Another feature I added, which I don't think was technically asked for, was---in both parts 1 and 2 of the challenge---if the form had been used to filter the data, but the user wished to view all the data again, unfiltered, all they had to do was empty the form and re-submit.
+
 If I was to work on this further, I would be interested in getting info from the data.js file to populate a dropdown box for the form for unique values of state, country, and shape.
