@@ -10,11 +10,11 @@ printTable(tableData);
 var button = d3.select("#filter-btn");
 
 // Select the form
-var form = d3.select("#form");
+var form = d3.select("#filter-form");
 
 // Create event handlers 
 button.on("click", runEnter);
-form.on("submit",runEnter);
+form.on("submit", runEnter);
 
 
 // Print the table with the data for each sighting
@@ -78,16 +78,16 @@ function runEnter() {
   	filteredData = filteredData.filter(sighting => sighting.datetime === inputDate);
   };
   if (inputCity){
-  	filteredData = filteredData.filter(sighting => sighting.city === inputCity);
+  	filteredData = filteredData.filter(sighting => sighting.city === inputCity.toLowerCase());
   };
   if (inputState){
-  	filteredData = filteredData.filter(sighting => sighting.state === inputState);
+  	filteredData = filteredData.filter(sighting => sighting.state === inputState.toLowerCase());
   };
   if (inputCountry){
-  	filteredData = filteredData.filter(sighting => sighting.country === inputCountry);
+  	filteredData = filteredData.filter(sighting => sighting.country === inputCountry.toLowerCase());
   };
   if (inputShape){
-  	filteredData = filteredData.filter(sighting => sighting.shape === inputShape);
+  	filteredData = filteredData.filter(sighting => sighting.shape === inputShape.toLowerCase());
   };
 
   console.log(filteredData);
